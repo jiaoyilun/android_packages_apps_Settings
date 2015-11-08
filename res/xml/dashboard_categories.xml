@@ -196,7 +196,14 @@
                 android:fragment="com.android.settings.users.UserSettings"
                 android:icon="@drawable/ic_settings_multiuser"
                 />
-
+                
+		 <!-- Advance Setting -->
+        <dashboard-tile
+                android:id="@+id/advance_settings"
+                android:title="@string/advance_settings_title"
+                android:fragment="com.android.settings.bliss.InterfaceSettings"
+                android:icon="@drawable/ic_settings_more"
+                />
     </dashboard-category>
 
     <!-- Personalization -->

@@ -985,4 +985,13 @@
                  <b>提交总数：</b> <xliff:g id="total_commits">%2$s</xliff:g><br/><br/>
                  <b>最后更新：</b> <xliff:g id="date">%3$s</xliff:g>]]></string>
   <string name="quick_settings_reset_message">重置快速设置瓷块吗？</string>
+  
+<string name="category_other">其他</string>
+
+  <string name="wat">时钟插件</string>
+  <string name="wats">时钟插件快捷入口</string> 
+  
+   <!-- AudioFX -->
+    <string name="sound_effect">音效设置</string>
+    <string name="sound_effect_summary">设置系统音效</string>
 </resources>

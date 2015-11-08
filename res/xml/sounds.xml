@@ -77,13 +77,6 @@
                 android:persistent="false"
                 android:ringtoneType="notification" />
 
-        <!-- Interruptions -->
-        <PreferenceScreen
-                android:key="zen_mode"
-                android:title="@string/zen_mode_settings_title"
-                settings:keywords="@string/keywords_sounds_and_notifications_interruptions"
-                android:fragment="com.android.settings.notification.ZenModeSettings" />
-
         <!-- Increasing ring -->
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
                 android:key="increasing_ring"
@@ -135,4 +128,19 @@
                 android:persistent="false"
                 settings:advanced="true"/>
     </PreferenceCategory>
+    
+    <PreferenceCategory
+            android:key="vibrate"
+            android:title="@string/category_other">
+
+     <PreferenceScreen
+        android:title="@string/sound_effect"
+        android:summary="@string/sound_effect_summary">
+        <intent android:targetPackage="org.cyanogenmod.audiofx" 
+        android:action="android.intent.action.MAIN" 
+        android:targetClass="org.cyanogenmod.audiofx.ActivityMusic" />
+    </PreferenceScreen>
+        
+        </PreferenceCategory>
+    
 </PreferenceScreen>

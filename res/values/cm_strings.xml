@@ -1014,6 +1014,7 @@
     <string name="qs_tile_flashlight">Flashlight</string>
     <string name="qs_tile_location">Location</string>
     <string name="qs_tile_cast_screen">Cast screen</string>
+    <string name="qs_tile_mobile_data">Mobile data</string>
     <string name="qs_tile_hotspot">Hotspot</string>
     <string name="qs_tile_adb_over_network">ADB over network</string>
     <string name="qs_tile_profiles">System profiles</string>
@@ -1408,4 +1409,12 @@
                  <b>Last update:</b> <xliff:g id="date">%3$s</xliff:g>]]></string>
 
     <string name="quick_settings_reset_message">Reset quick settings tiles?</string>
+    
+    <string name="category_other">Other</string>
+     <string name="wat">cLock</string>
+    <string name="wats">Shortcut for cLock</string> 
+    
+       <!-- AudioFX -->
+    <string name="sound_effect">Sound Effect</string>
+    <string name="sound_effect_summary">Set sound effect</string>
 </resources>
