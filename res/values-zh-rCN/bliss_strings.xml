@@ -275,8 +275,8 @@
     <string name="show_network_traffic_up">上传</string>
     <string name="show_network_traffic_down">下载</string>
     <string name="show_network_traffic_all">上传和下载</string>
-    <string name="show_network_traffic_bit">bit/秒</string>
-    <string name="show_network_traffic_byte">byte/秒</string>
+    <string name="show_network_traffic_bit">bit/s</string>
+    <string name="show_network_traffic_byte">byte/s</string>
     <string name="show_network_traffic_500">0.5秒</string>
     <string name="show_network_traffic_1000">1秒</string>
     <string name="show_network_traffic_1500">1.5秒</string>
@@ -287,6 +287,8 @@
     <string name="network_traffic_color_style">颜色样式</string>
     <string name="network_traffic_color_reset">重置颜色</string>
     <string name="network_traffic_color_reset_message">重置网络传输监视器颜色为默认？</string>
+    <string name="network_traffic_hide_arrow">隐藏箭头</string>
+    <string name="network_traffic_hide_arrow_summary">隐藏网络传输状态箭头</string>
     <!-- Recents panel settings -->
     <string name="recents_options_title">近期任务选项</string>
     <string name="recents_panel_settings">近期任务面板设置</string>
@@ -817,9 +819,6 @@
     <string name="trigger_top_summary">调整触发区域的位置</string>
     <string name="trigger_bottom_title">触发高度</string>
     <string name="trigger_bottom_summary">调整触发区域的高度</string>
-    <!-- Show bluetooth icon when disconnected -->
-    <string name="status_bar_bluetooth_icon">显示蓝牙图标</string>
-    <string name="status_bar_bluetooth_icon_summary">当蓝牙图标没有被连接时显示</string>
     <!-- The volume key answer -->
     <string name="volume_answer_call_title">音量键接听</string>
     <string name="volume_answer_call_summary">音量上键接听</string>
@@ -1202,5 +1201,12 @@
     
      <!-- Advance Setting -->
     <string name="advance_settings_title">高级设置</string>
+    
+    <!-- Headphones icon switch -->
+    <string name="show_headset_icon_title">耳机图标</string>
+    <string name="show_headset_icon_summary">当耳机设备接入时显示</string>
+     <!-- Show bluetooth icon when disconnected -->
+    <string name="status_bar_bluetooth_icon">蓝牙图标</string>
+    <string name="status_bar_bluetooth_icon_summary">当蓝牙设备接入时显示</string>
 	
 </resources>
