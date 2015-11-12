@@ -203,7 +203,8 @@
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <net.margaritov.preference.colorpicker.ColorPickerPanelView
             android:id="@+id/panel_view_5"
