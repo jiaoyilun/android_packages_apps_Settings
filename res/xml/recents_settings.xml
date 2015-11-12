@@ -57,7 +57,6 @@
             android:key="android_recents_clear_all_icon_color"
             android:title="@string/icon_title"
             android:defaultValue="0xffffffff"
-            android:visibility="gone"
             android:dependency="show_clear_all_recents" />
     </PreferenceCategory>
 
