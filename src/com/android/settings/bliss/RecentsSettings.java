@@ -45,8 +45,8 @@ public class RecentsSettings extends SettingsPreferenceFragment implements OnPre
     private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
 	private static final String PREF_CLEAR_ALL_BG_COLOR =
             "android_recents_clear_all_bg_color";
-    private static final String PREF_CLEAR_ALL_ICON_COLOR =
-            "android_recents_clear_all_icon_color";
+//    private static final String PREF_CLEAR_ALL_ICON_COLOR =
+//            "android_recents_clear_all_icon_color";
 
     private static final int RED = 0xffDC4C3C;
     private static final int WHITE = 0xffffffff;
@@ -54,7 +54,7 @@ public class RecentsSettings extends SettingsPreferenceFragment implements OnPre
 
     private SwitchPreference mRecentsClearAll;
     private ListPreference mRecentsClearAllLocation;
-    private ColorPickerPreference mClearAllIconColor;
+//    private ColorPickerPreference mClearAllIconColor;
     private ColorPickerPreference mClearAllBgColor;
 
     @Override
@@ -90,15 +90,15 @@ public class RecentsSettings extends SettingsPreferenceFragment implements OnPre
         mClearAllBgColor.setDefaultColors(RED, RED);
         mClearAllBgColor.setOnPreferenceChangeListener(this);
 
-        mClearAllIconColor =
-		      (ColorPickerPreference) findPreference(PREF_CLEAR_ALL_ICON_COLOR);
-        intColor = Settings.System.getInt(resolver,
-           Settings.System.RECENT_APPS_CLEAR_ALL_ICON_COLOR, WHITE); 
-        mClearAllIconColor.setNewPreviewColor(intColor);
-        hexColor = String.format("#%08x", (0xffffffff & intColor));
-        mClearAllIconColor.setSummary(hexColor);
-        mClearAllIconColor.setDefaultColors(WHITE, WHITE);
-        mClearAllIconColor.setOnPreferenceChangeListener(this);
+//        mClearAllIconColor =
+//		      (ColorPickerPreference) findPreference(PREF_CLEAR_ALL_ICON_COLOR);
+//        intColor = Settings.System.getInt(resolver,
+//           Settings.System.RECENT_APPS_CLEAR_ALL_ICON_COLOR, WHITE); 
+//        mClearAllIconColor.setNewPreviewColor(intColor);
+//        hexColor = String.format("#%08x", (0xffffffff & intColor));
+//        mClearAllIconColor.setSummary(hexColor);
+//        mClearAllIconColor.setDefaultColors(WHITE, WHITE);
+//        mClearAllIconColor.setOnPreferenceChangeListener(this);
 
     }
 
@@ -127,15 +127,16 @@ public class RecentsSettings extends SettingsPreferenceFragment implements OnPre
                     Settings.System.RECENT_APPS_CLEAR_ALL_BG_COLOR, intHex);
             preference.setSummary(hex);
             return true;
-        } else if (preference == mClearAllIconColor) {
-            hex = ColorPickerPreference.convertToARGB(
-                    Integer.valueOf(String.valueOf(newValue)));
-            intHex = ColorPickerPreference.convertToColorInt(hex);
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.RECENT_APPS_CLEAR_ALL_ICON_COLOR, intHex);
-            preference.setSummary(hex);
-            return true;
-        }
+        } 
+//        else if (preference == mClearAllIconColor) {
+//            hex = ColorPickerPreference.convertToARGB(
+//                    Integer.valueOf(String.valueOf(newValue)));
+//            intHex = ColorPickerPreference.convertToColorInt(hex);
+//            Settings.System.putInt(getActivity().getContentResolver(),
+//                    Settings.System.RECENT_APPS_CLEAR_ALL_ICON_COLOR, intHex);
+//            preference.setSummary(hex);
+//            return true;
+//        }
         return false;
     }
 

@@ -1207,6 +1207,13 @@
     <string name="show_headset_icon_summary">当耳机设备接入时显示</string>
      <!-- Show bluetooth icon when disconnected -->
     <string name="status_bar_bluetooth_icon">蓝牙图标</string>
-    <string name="status_bar_bluetooth_icon_summary">当蓝牙设备接入时显示</string>
+    <string name="status_bar_bluetooth_icon_summary">当蓝牙功能开启但无设备接入时显示</string>
+	
+	<string name="heads_up_time_out_2sec"> 2 秒</string>
+  <string name="heads_up_time_out_4sec"> 4 秒</string>
+  <string name="heads_up_time_out_6sec"> 6 秒</string>
+  <string name="heads_up_time_out_8sec"> 8 秒</string>
+  <string name="heads_up_time_out_10sec"> 10 秒</string>
+  <string name="heads_up_time_out_never">从不</string>
 	
 </resources>
