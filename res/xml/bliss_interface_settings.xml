@@ -23,5 +23,12 @@
         android:title="@string/recents_options_title"
         android:icon="@drawable/ic_settings_recents" />
 
+ <!-- Lock Screen Options -->
+    <PreferenceScreen
+        android:key="lock_screen"
+        android:fragment="com.android.settings.bliss.LockScreenSettings"
+        android:title="@string/lockscreen_settings_title"
+        android:icon="@drawable/ic_settings_lockscreen"
+        settings:advanced="true" />
 
 </PreferenceScreen>

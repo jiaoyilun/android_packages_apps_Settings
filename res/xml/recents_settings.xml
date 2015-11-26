@@ -20,7 +20,8 @@
             android:key="recents_show_search_bar"
             android:title="@string/recents_show_searchbar"
             android:summary="@string/recents_show_searchbar_summary"
-            android:defaultValue="false" />
+            android:defaultValue="true" 
+            android:visibility="gone"/>
 
         <!-- Membar in Recents -->
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
@@ -76,4 +77,13 @@
 			        android:summary="@string/shake_clean_recent_summary"
 			        android:defaultValue="false" />
 
+	 <PreferenceCategory
+            android:title="@string/recents_whitelist_title"
+            android:key="exclude_applications_list">
+        <Preference
+            android:key="add_exclude_packages"
+            android:icon="@drawable/ic_menu_add_dark"
+            android:title="@string/add_exclude_package"
+            android:summary="@string/add_exclude_package_summary"/>
+    </PreferenceCategory>
 </PreferenceScreen>

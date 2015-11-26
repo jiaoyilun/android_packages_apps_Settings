@@ -1807,4 +1807,11 @@
     <string name="heads_up_time_out_8sec">8 seconds</string>
     <string name="heads_up_time_out_10sec">10 seconds</string>
     <string name="heads_up_time_out_never">Never</string>
+    
+    <string name="show_chinese_date">Show Chinese Date</string>
+    
+    <string name="recents_whitelist_title">WhiteList</string>
+     <string name="add_exclude_package">Add Apps</string>
+     <string name="add_exclude_package_summary">These apps will not be killed</string>
+    
 </resources>
