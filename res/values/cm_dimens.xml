@@ -28,5 +28,9 @@
 
     <!-- Dashboard Category Margin Bottom -->
     <dimen name="dashboard_category_margin_bottom">8dip</dimen>
+    
+    <!-- Gesture Anywhere -->
+    <dimen name="ga_gesture_thumbnail_inset">8dip</dimen>
+    <dimen name="ga_gesture_thumbnail_size">64dip</dimen>
 
 </resources>
