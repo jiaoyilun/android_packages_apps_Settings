@@ -21,7 +21,16 @@
         android:summary="@string/gesture_anywhere_enabled_summary"
         android:defaultValue="false" />
 
-    <ListPreference
+ <Preference
+        android:key="gesture_anywhere_gestures"
+        android:title="@string/gesture_anywhere_gestures_title"
+        android:summary="@string/gesture_anywhere_gestures_summary" 
+        android:dependency="gesture_anywhere_enabled"/>
+
+    <PreferenceCategory
+        android:title="@string/trigger_category" />
+
+ 	<ListPreference
         android:key="gesture_anywhere_position"
         android:persistent="false"
         android:dialogTitle="@string/gesture_anywhere_position_title"
@@ -30,23 +39,26 @@
         android:entryValues="@array/gesture_anywhere_position_values"
         android:dependency="gesture_anywhere_enabled"/>
 
-    <Preference
-        android:key="gesture_anywhere_gestures"
-        android:title="@string/gesture_anywhere_gestures_title"
-        android:summary="@string/gesture_anywhere_gestures_summary" />
-
-    <PreferenceCategory
-        android:title="@string/trigger_category" />
-
     <com.android.settings.bliss.SeekBarPreference
         android:key="gesture_anywhere_trigger_width"
         android:title="@string/trigger_width_title"
         android:summary="@string/trigger_width_summary"
-        android:max="64"
-        settings:minimum="4"
-        settings:defaultVal="4"
+        android:max="80"
+        settings:minimum="40"
+        settings:defaultVal="50"
         settings:unitsLeft=""
         settings:unitsRight="px"
+        android:dependency="gesture_anywhere_enabled" />
+
+<com.android.settings.bliss.SeekBarPreference
+        android:key="gesture_anywhere_trigger_bottom"
+        android:title="@string/trigger_bottom_title"
+        android:summary="@string/trigger_bottom_summary"
+        android:max="100"
+        settings:minimum="1"
+        settings:defaultVal="100"
+        settings:unitsLeft=""
+        settings:unitsRight="%"
         android:dependency="gesture_anywhere_enabled" />
 
     <com.android.settings.bliss.SeekBarPreference
@@ -59,16 +71,4 @@
         settings:unitsLeft=""
         settings:unitsRight="%"
         android:dependency="gesture_anywhere_enabled" />
-
-    <com.android.settings.bliss.SeekBarPreference
-        android:key="gesture_anywhere_trigger_bottom"
-        android:title="@string/trigger_bottom_title"
-        android:summary="@string/trigger_bottom_summary"
-        android:max="100"
-        settings:minimum="1"
-        settings:defaultVal="100"
-        settings:unitsLeft=""
-        settings:unitsRight="%"
-        android:dependency="gesture_anywhere_enabled" />
-
 </PreferenceScreen>

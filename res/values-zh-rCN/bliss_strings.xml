@@ -755,10 +755,10 @@
     <string name="gesture_anywhere_title">无处不在的手势</string>
     <string name="gesture_anywhere_enabled_title">无处不在的手势</string>
     <string name="gesture_anywhere_enabled_summary">启用手势功能</string>
-    <string name="gesture_anywhere_position_title">位置</string>
+    <string name="gesture_anywhere_position_title">区域位置</string>
     <string name="gesture_anywhere_position_left">左边缘</string>
     <string name="gesture_anywhere_position_right">右边缘</string>
-    <string name="gesture_anywhere_gestures_title">手势</string>
+    <string name="gesture_anywhere_gestures_title">自定义手势</string>
     <string name="gesture_anywhere_gestures_summary">添加、删除和编辑手势</string>
     <!-- Label, button used to add a gesture -->
     <string name="ga_button_add">添加手势</string>
