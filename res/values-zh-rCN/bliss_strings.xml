@@ -759,6 +759,7 @@
     <string name="gesture_anywhere_position_left">左边缘</string>
     <string name="gesture_anywhere_position_right">右边缘</string>
     <string name="gesture_anywhere_gestures_title">自定义手势</string>
+    <string name="gesture_anywhere_gestures_manager">手势管理</string>
     <string name="gesture_anywhere_gestures_summary">添加、删除和编辑手势</string>
     <!-- Label, button used to add a gesture -->
     <string name="ga_button_add">添加手势</string>
@@ -1231,5 +1232,20 @@
     <string name="weather_number_of_notifications_four_title">4</string>
     <string name="weather_number_of_notifications_five_title">5</string>
     <string name="weather_number_of_notifications_six_title">6</string>
+    
+    <string name="captive_portal_detection">网络状况检测</string>
+  <string name="captive_portal_detection_summary">如果状态栏有感叹号，可关闭网络状况检测</string>
+  <string name="captive_portal_server">自定义验证服务器</string>
+  <string name="captive_portal_server_notset">未填写验证服务器</string>
+  <string name="captive_portal_server_explain">自定义验证服务器，修改完成需要重启或者关闭打开飞行模式</string>
      
+    <string name="gesture_direct_title">手势和体感</string>  
+  <string name="gesture_title">手势</string>  
+  <string name="direct_control_title">体感</string>
+  <string name="direct_call_for_dialer_title">拨号界面体感拨号</string>
+  <string name="direct_call_for_dialer_summary">手机放在耳边时将自动拨打当前拨号器输入的电话号码</string>
+  <string name="direct_call_for_mms_title">短信界面体感拨号</string>
+  <string name="direct_call_for_mms_summary">手机放在耳边时将自动拨打当前的短信联系者电话号码</string>  
+  <string name="three_finger_gesture">三指截屏</string>
+  <string name="three_finger_gesture_summary">从上至下滑动三根手指截屏</string>
 </resources>

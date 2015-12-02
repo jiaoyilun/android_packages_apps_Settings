@@ -17,6 +17,11 @@
 
 package com.android.settings;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.ActivityManagerNative;
@@ -31,16 +36,15 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
+import android.hardware.usb.IUsbManager;
+import android.hardware.usb.UsbManager;
 import android.net.NetworkUtils;
 import android.net.wifi.IWifiManager;
 import android.net.wifi.WifiInfo;
-import android.hardware.usb.IUsbManager;
 import android.net.wifi.WifiManager;
 import android.os.AsyncTask;
-import android.os.BatteryManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
@@ -51,7 +55,6 @@ import android.os.StrictMode;
 import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.os.UserManager;
-import android.hardware.usb.UsbManager;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
@@ -61,23 +64,21 @@ import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
+import android.text.Spannable;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.HardwareRenderer;
 import android.view.IWindowManager;
 import android.view.View;
 import android.view.accessibility.AccessibilityManager;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settings.search.Indexable;
 import com.android.settings.widget.SwitchBar;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
 
 /*
  * Displays preferences for application developers.
@@ -187,6 +188,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private static final String ADVANCED_REBOOT_KEY = "advanced_reboot";
 
     private static final String DEVELOPMENT_SHORTCUT_KEY = "development_shortcut";
+    
+    private static final String CAPTIVE_PORTAL_SERVER = "captive_portal_server";
 
     private static final int RESULT_DEBUG_APP = 1000;
 
@@ -195,6 +198,9 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private static final int REQUEST_CODE_ENABLE_OEM_UNLOCK = 0;
 
     private static String DEFAULT_LOG_RING_BUFFER_SIZE_IN_BYTES = "262144"; // 256K
+    
+    private PreferenceScreen mServer;
+    private String mServerText="g.cn";
 
     private IWindowManager mWindowManager;
     private IBackupManager mBackupManager;
@@ -320,6 +326,9 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         final PreferenceGroup debugDebuggingCategory = (PreferenceGroup)
                 findPreference(DEBUG_DEBUGGING_CATEGORY_KEY);
 
+        mServer = (PreferenceScreen) findPreference(CAPTIVE_PORTAL_SERVER);
+        updateServerTextSummary();
+        
         mEnableAdb = findAndInitSwitchPref(ENABLE_ADB);
         mAdbNotify = (SwitchPreference) findPreference(ADB_NOTIFY);
         mAllPrefs.add(mAdbNotify);
@@ -458,6 +467,17 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         mAllPrefs.add(pref);
         pref.setOnPreferenceChangeListener(this);
         return pref;
+    }
+    
+    private void updateServerTextSummary() {
+        mServerText = Settings.Global.getString(
+            getActivity().getContentResolver(), Settings.Global.CAPTIVE_PORTAL_SERVER);
+
+        if (TextUtils.isEmpty(mServerText)) {
+            mServer.setSummary(R.string.captive_portal_server_notset);
+        } else {
+            mServer.setSummary(mServerText);
+        }
     }
 
     private void disableForUser(Preference pref) {
@@ -1756,6 +1776,40 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             writeImmediatelyDestroyActivitiesOptions();
         } else if (preference == mShowAllANRs) {
             writeShowAllANRsOptions();
+        } else if (preference == mServer) {
+            AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+            alert.setTitle(R.string.captive_portal_server);
+            alert.setMessage(R.string.captive_portal_server_explain);
+            LinearLayout parent = new LinearLayout(getActivity());
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.MATCH_PARENT);
+            parent.setLayoutParams(params);
+            // Set an EditText view to get user input
+            final EditText input = new EditText(getActivity());
+            input.setText(TextUtils.isEmpty(mServerText) ? ""
+                    : mServerText);
+            input.setSelection(input.getText().length());
+            params.setMargins(60, 0, 60, 0);
+            input.setLayoutParams(params);
+            parent.addView(input);
+            alert.setView(parent);
+            alert.setPositiveButton(getString(android.R.string.ok),
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog,
+                                int whichButton) {
+                            String value = ((Spannable) input.getText())
+                                    .toString().trim();
+                            Settings.Global
+                                    .putString(
+                                            getActivity().getContentResolver(),
+                                            Settings.Global.CAPTIVE_PORTAL_SERVER,
+                                            value);
+                            updateServerTextSummary();
+                        }
+                    });
+            alert.setNegativeButton(getString(android.R.string.cancel), null);
+            alert.show();
         } else if (preference == mForceHardwareUi) {
             writeHardwareUiOptions();
         } else if (preference == mForceMsaa) {

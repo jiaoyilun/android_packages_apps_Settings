@@ -1054,6 +1054,7 @@
     <string name="gesture_anywhere_position_left">Left edge</string>
     <string name="gesture_anywhere_position_right">Right edge</string>
     <string name="gesture_anywhere_gestures_title">Gestures</string>
+    <string name="gesture_anywhere_gestures_manager">Gestures Manager</string>
     <string name="gesture_anywhere_gestures_summary">Add, remove, and edit gestures</string>
     <!-- Label, button used to add a gesture -->
     <string name="ga_button_add">Add gesture</string>
@@ -1522,7 +1523,6 @@
     <string name="use_custom_app_title">Use custom application</string>
     <string name="use_custom_app_summary">Use custom application instead of the recent applications dialog</string>  
     <string name="group_applications">Applications</string>
-    <string name="select_custom_app_title">Select custom application</string>
 
     <!-- Disable torch when screen goes off -->
     <string name="disable_torch_screen_off_title">Disable torch on screen off</string>
@@ -1595,26 +1595,16 @@
     <string name="navigation_menu_right">Right</string>
     <string name="navigation_menu_left">Left</string>
     <string name="navigation_menu_both">Both</string>
-    <string name="navigation_menu_default_jb_behavior">Show on request (default)</string>
-    <string name="navigation_menu_never_show">Never show</string>
-    <string name="navigation_menu_always_show">Always show</string>
     <string name="navigation_bar">Navigation bar</string>
     <string name="navbar_button_cat">Navigation bar buttons</string>
     <string name="title_pref_menu_location">Menu location</string>
     <string name="summary_pref_menu_location">Where do you want the menu buttons to appear?</string>
-    <string name="title_pref_menu_display">Menu visibility</string>
-    <string name="summary_pref_menu_display">How and when do you want the menu buttons to appear?</string>
     <string name="navbar_enable_bar">Enable navigation bar</string>
-    <string name="navbar_enable_bar_summary">Enable the navigation bar</string>
-    <string name="navigation_bar_height_title">Navigation bar height</string>
     <string name="navigation_bar_height_landscape_title">Navigation bar height landscape</string>
-    <string name="navigation_bar_width_title">Navigation bar width</string>
     <string name="navbar_can_move">Show landscape</string>
     <string name="navbar_can_move_summary">Shows navigation bar in landscape on the bottom</string>
-    <string name="navbar_style_dimen_title">Change dimensions</string>
     <string name="navbar_button_title">Customize buttons</string>
     <string name="navbar_cat">Navigation bar</string>
-    <string name="navbar_dimensions_reset_message">Reset all dimensions entries to default?</string>
     <string name="navbar_button_style_reset_message">Reset all style entries to default?</string>
     <string name="show_ime_arrows_title">Show arrow keys while typing</string>
     <string name="show_ime_arrows_summary">Display left and right cursor buttons in navigation bar while typing. Longpress to navigate up/down. Overrides IME switcher and menu buttons.</string>
@@ -1784,7 +1774,6 @@
     <string name="lockscreen_see_through_title">Lockscreen blur</string>
     <string name="lockscreen_see_through_summary">Blurs and displays the content behind your lockscreen.</string>
     <string name="lockscreen_blur_radius">Blur effect intensity</string> 
-    <string name="lockscreen_blur_radius">Blur effect intensity</string>
 
     <!-- On-The-Go -->
     <string name="power_menu_onthego_title">On-The-Go Mode</string>
@@ -1813,5 +1802,23 @@
     <string name="recents_whitelist_title">WhiteList</string>
      <string name="add_exclude_package">Add Apps</string>
      <string name="add_exclude_package_summary">These apps will not be killed</string>
+    
+     <!-- Captive Portal -->
+    <string name="captive_portal_detection">Captive portal detection</string>
+    <string name="captive_portal_detection_summary">If disabled, a connection to google servers is not required in order to detect data connection.</string>	
+    <string name="captive_portal_server">Captive portal Server</string>
+    <string name="captive_portal_server_notset">Not Set Server</string>
+    <string name="captive_portal_server_explain">Set captive portal server.You need to reboot your device.</string>
+    
+     <!-- Gesture and Direct Control -->  
+    <string name="gesture_title">Gesture</string>
+    <string name="gesture_direct_title">Gesture and Direct Control</string>  
+    <string name="direct_control_title">Direct Control</string>
+    <string name="direct_call_for_dialer_title">Direct Call in Dailer</string>
+    <string name="direct_call_for_dialer_summary">Lift phone to ear after entering number in dialer to call directly</string>
+    <string name="direct_call_for_mms_title">Direct Call in Mms</string>
+    <string name="direct_call_for_mms_summary">Lift phone to ear will automatically call current contact</string>
+    <string name="three_finger_gesture">Three finger gesture</string>
+    <string name="three_finger_gesture_summary">Swipe three finger to screenshot</string>
     
 </resources>

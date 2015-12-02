@@ -23,7 +23,7 @@
 
  <Preference
         android:key="gesture_anywhere_gestures"
-        android:title="@string/gesture_anywhere_gestures_title"
+        android:title="@string/gesture_anywhere_gestures_manager"
         android:summary="@string/gesture_anywhere_gestures_summary" 
         android:dependency="gesture_anywhere_enabled"/>
 

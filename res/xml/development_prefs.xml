@@ -42,6 +42,17 @@
         android:title="@string/enable_quickboot_title"
         android:summary="@string/enable_quickboot_summary" />
 
+	<com.android.settings.bliss.GlobalSettingSwitchPreference
+            android:key="captive_portal_detection_enabled"
+            android:title="@string/captive_portal_detection"
+            android:summary="@string/captive_portal_detection_summary"
+            android:defaultValue="true"/>
+
+     <PreferenceScreen
+         android:key="captive_portal_server"
+         android:title="@string/captive_portal_server"
+         android:dependency="captive_portal_detection_enabled" />
+
     <PreferenceScreen
             android:key="local_backup_password"
             android:title="@string/local_backup_password_title"

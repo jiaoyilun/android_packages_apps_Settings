@@ -266,8 +266,8 @@
   <string name="device_hostname">设备网络名</string>
   <string name="development_shortcut_title">开发快捷方式</string>
   <string name="development_shortcut_summary">在最近任务列表中启用应用管理快捷方式</string>
-  <string name="double_tap_to_sleep_title">双击以睡眠</string>
-  <string name="double_tap_to_sleep_summary">双击状态栏以关闭屏幕显示</string>
+  <string name="double_tap_to_sleep_title">双击睡眠</string>
+  <string name="double_tap_to_sleep_summary">双击状态栏来关闭屏幕显示</string>
   <string name="wake_when_plugged_or_unplugged_title">连接或移除电源时唤醒</string>
   <string name="wake_when_plugged_or_unplugged_summary">连接或断开电源时点亮屏幕</string>
   <string name="kill_app_longpress_back">使用返回键强行关闭应用</string>
