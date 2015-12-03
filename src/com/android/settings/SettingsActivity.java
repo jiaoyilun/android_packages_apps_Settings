@@ -1036,7 +1036,7 @@ public class SettingsActivity extends Activity
             String nodeName = parser.getName();
             if (!"dashboard-categories".equals(nodeName)) {
                 throw new RuntimeException(
-                        "XML document must start with <preference-categories> tag; found"
+                        "XML document must start with <preference-categories> tag; found "
                                 + nodeName + " at " + parser.getPositionDescription());
             }
 

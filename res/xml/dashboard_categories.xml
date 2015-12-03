@@ -162,15 +162,6 @@
                     android:targetClass="com.cyanogenmod.settings.device.BluetoothInputSettings" />
         </dashboard-tile>
 
-  <!-- Gestures -->
-        <dashboard-tile
-                android:id="@+id/gesture_settings"
-                android:title="@string/gesture_direct_title"
-                android:fragment="com.android.settings.bliss.GestureSettings"
-                android:icon="@drawable/ic_settings_gestures"
-                />
-
-
         <!-- Battery -->
         <dashboard-tile
                 android:id="@+id/battery_settings"
@@ -195,13 +186,22 @@
                 android:icon="@drawable/ic_settings_multiuser"
                 />
                 
-		 <!-- Advance Setting -->
+		  <!-- Recents Options -->
+	   <dashboard-tile
+                android:id="@+id/recents_panel"
+                android:title="@string/recents_options_title"
+                android:fragment="com.android.settings.bliss.RecentsSettings"
+                android:icon="@drawable/ic_settings_recents"/>      
+	        
+        
+      <!-- Gestures -->
         <dashboard-tile
-                android:id="@+id/advance_settings"
-                android:title="@string/advance_settings_title"
-                android:fragment="com.android.settings.bliss.InterfaceSettings"
-                android:icon="@drawable/ic_settings_more"
-                />
+                android:id="@+id/gesture_settings"
+                android:title="@string/gesture_direct_title"
+                android:fragment="com.android.settings.bliss.GestureSettings"
+                android:icon="@drawable/ic_settings_gestures"
+                /> 
+        
     </dashboard-category>
 
     <!-- Personalization -->

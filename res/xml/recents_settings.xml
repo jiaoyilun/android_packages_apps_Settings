@@ -71,12 +71,6 @@
             android:defaultValue="true"
            />
 
-	<com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-			        android:key="shake_to_clean_recents"
-			        android:title="@string/shake_clean_recent"
-			        android:summary="@string/shake_clean_recent_summary"
-			        android:defaultValue="false" />
-
 	 <PreferenceCategory
             android:title="@string/recents_whitelist_title"
             android:key="exclude_applications_list">

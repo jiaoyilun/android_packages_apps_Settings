@@ -59,6 +59,8 @@ import static android.provider.Settings.System.SCREEN_OFF_TIMEOUT;
 public class LockScreenSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener, Indexable {
 
+	private static final String TAG = "LockScreenSettings";
+	
     private static final String KEY_SECURITY_CATEGORY = "security_category";
     private static final String KEY_GENERAL_CATEGORY = "general_category";
     private static final String KEY_OWNER_INFO_SETTINGS = "owner_info_settings";
@@ -306,28 +308,35 @@ public class LockScreenSettings extends SettingsPreferenceFragment
 
             if (singleUser && lockPatternUtils.isLockScreenDisabled()) {
                 resid = R.xml.security_settings_lockscreen;
+                Log.d(TAG, "AAAAAAAAAAAAAAAA");
             } else {
                 resid = R.xml.security_settings_chooser;
+                Log.d(TAG, "BBBBBBBBBBBBBBBBB");
             }
         } else if (lockPatternUtils.usingFingerprint()
                 && lockPatternUtils.isFingerprintInstalled(context)) {
             resid = R.xml.security_settings_fingerprint;
+            Log.d(TAG, "CCCCCCCCCCCCCCCCCCC");
         } else if (lockPatternUtils.usingBiometricWeak() &&
                 lockPatternUtils.isBiometricWeakInstalled()) {
                 resid = R.xml.security_settings_biometric_weak;
+                Log.d(TAG, "DDDDDDDDDDDDDDDD");
         } else {
             switch (lockPatternUtils.getKeyguardStoredPasswordQuality()) {
                 case DevicePolicyManager.PASSWORD_QUALITY_SOMETHING:
                     resid = R.xml.security_settings_pattern;
+                    Log.d(TAG, "EEEEEEEEEEEEEEEEE");
                     break;
                 case DevicePolicyManager.PASSWORD_QUALITY_NUMERIC:
                 case DevicePolicyManager.PASSWORD_QUALITY_NUMERIC_COMPLEX:
                     resid = R.xml.security_settings_pin;
+                    Log.d(TAG, "FFFFFFFFFFFFFFFFFFF");
                     break;
                 case DevicePolicyManager.PASSWORD_QUALITY_ALPHABETIC:
                 case DevicePolicyManager.PASSWORD_QUALITY_ALPHANUMERIC:
                 case DevicePolicyManager.PASSWORD_QUALITY_COMPLEX:
                     resid = R.xml.security_settings_password;
+                    Log.d(TAG, "GGGGGGGGGGGGGGG");
                     break;
             }
         }

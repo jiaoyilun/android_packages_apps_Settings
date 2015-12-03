@@ -2402,8 +2402,8 @@
                 android:value="com.android.settings.bliss.InterfaceSettings" />
         </activity>
 
-        <activity  android:name=".bliss.InterfaceSettings" />
         <activity  android:name=".bliss.GestureSettings" />
+        <activity  android:name=".bliss.RecentsSettings" />
         
         <!-- Gesture Anywhere -->
         <activity android:name=".bliss.gestureanywhere.GestureAnywhereBuilderActivity" />

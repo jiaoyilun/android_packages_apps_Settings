@@ -290,7 +290,7 @@
     <string name="network_traffic_hide_arrow">隐藏箭头</string>
     <string name="network_traffic_hide_arrow_summary">隐藏网络传输状态箭头</string>
     <!-- Recents panel settings -->
-    <string name="recents_options_title">近期任务选项</string>
+    <string name="recents_options_title">近期任务</string>
     <string name="recents_panel_settings">近期任务面板设置</string>
     <string name="show_clear_all_recents_button_title">清除所有近期任务按钮</string>
     <string name="show_clear_all_recents_button_summary">显示全部清除按扭</string>
@@ -306,8 +306,8 @@
     <string name="recents_clear_all_dismiss_all_summary">选择清除所有任务时是否保留当前任务</string>
     <string name="clear_all_icon_colors">清除按钮图标颜色</string>    
     <string name="clear_all_btn_style">清除按钮样式</string>
-     <string name="shake_clean_recent">摇一摇</string>
-    <string name="shake_clean_recent_summary">摇一摇以清除所有任务</string>
+     <string name="shake_clean_recent">最近任务界面体感清除所有任务</string>
+    <string name="shake_clean_recent_summary">在最近任务界面时体感清除所有任务</string>
     <string name="recents_show_membar_title">内存栏</string>
     <string name="recents_show_membar_summary">显示可用内存栏</string>
     <!-- OmniSwitch -->
@@ -456,7 +456,6 @@
     <string name="animation_no_scroll_summary_on">启用</string>
     <string name="animation_no_scroll_summary_off">禁用</string>
     <string name="scroll_disclaimer_summary">注意：大多数应用需要重新启动才生效</string>
-    <string name="animation_settings_reset_message">重置所有的动画设置为默认?</string>
     <!-- Search Bar Switcher -->
     <string name="recents_show_searchbar">在最近应用列表中显示搜索栏</string>
     <string name="recents_show_searchbar_summary">在最近应用列表中启用或禁用搜索栏</string>
@@ -676,6 +675,7 @@
     <string name="lock_screen_weather_settings_summary">自定义天气</string>
     <string name="lock_screen_color_settings_summary">自定义颜色</string>
     <!-- Weather settings -->
+    <string name="weather_cat_notifications_title">策略设置</string>
     <string name="weather_show_weather_title">显示天气</string>
     <string name="weather_show_weather_summary">启用显示天气信息</string>
     <string name="weather_show_location_title">显示位置</string>
@@ -726,9 +726,6 @@
     <string name="slim_shortcut_picker">Slim操作</string>
     <string name="qs_slim_action_title">Slim操作</string>
     <string name="qs_slim_action_summary">添加Slim操作和设置顺序</string>
-    <!-- Captive Portal -->
-    <string name="captive_portal_detection">强制网络检测</string>
-    <string name="captive_portal_detection_summary">如果禁用，将不连接谷歌服务器检测数据连接是否畅通。</string>
     <!-- Advanced Display Settings -->
     <string name="display_settings">显示</string>
     <string name="advanced_display_settings_title">高级显示设置</string>
@@ -814,12 +811,6 @@
     <string name="app_circle_bar_summary">触碰屏幕右边缘显示圆圈应用程序启动器</string>
     <string name="app_circle_bar_included_apps_title">包括应用程序</string>
     <string name="app_circle_bar_included_apps_summary">将在圆圈侧边栏显示的应用程序</string>
-    <string name="trigger_width_title">触发宽度</string>
-    <string name="trigger_width_summary">调整触发区域的宽度</string>
-    <string name="trigger_top_title">触发位置</string>
-    <string name="trigger_top_summary">调整触发区域的位置</string>
-    <string name="trigger_bottom_title">触发高度</string>
-    <string name="trigger_bottom_summary">调整触发区域的高度</string>
     <!-- The volume key answer -->
     <string name="volume_answer_call_title">音量键接听</string>
     <string name="volume_answer_call_summary">音量上键接听</string>
@@ -1037,7 +1028,6 @@
     <string name="pie_button_second_layer_summary">更改二级按钮</string>
     <string name="pie_button_style_summary">更改pie按钮样式</string>
     <string name="pie_style_reset_message">重置样式项为默认？</string>
-    <string name="shortcut_action_help_pie_second_layer_delete_last_entry">移除列表中全部的 %1$s 将禁用pie的第二层项。</string>
     <string name="icon_color_mode_all_icons">所有图标</string>
     <string name="icon_color_mode_system_icons">系统图标</string>
     <string name="icon_color_mode_system_custom_icons">系统和自定义图标</string>
@@ -1093,13 +1083,6 @@
     <string name="tab_position_summary">在边缘的顶部、中部或底部显示标签。</string>
     <string name="tab_size_title">标签大小</string>
     <string name="tab_size_summary">更改可见标签大小</string>
-    <string name="trigger_category">触发区域</string>
-    <string name="trigger_width_title">触发宽度</string>
-    <string name="trigger_width_summary">调整触发区域的宽度</string>
-    <string name="trigger_top_title">触发位置</string>
-    <string name="trigger_top_summary">调整触发区域的位置</string>
-    <string name="trigger_bottom_title">触发高度</string>
-    <string name="trigger_bottom_summary">调整触发区域的高度</string>
     <!-- TRDS 5.0 -->
     <string name="theme_settings_title">暗色Bliss</string>
     <string name="theme_auto_mode_title">切换主题</string>
@@ -1239,7 +1222,7 @@
   <string name="captive_portal_server_notset">未填写验证服务器</string>
   <string name="captive_portal_server_explain">自定义验证服务器，修改完成需要重启或者关闭打开飞行模式</string>
      
-    <string name="gesture_direct_title">手势和体感</string>  
+    <string name="gesture_direct_title">手势 &amp; 体感</string>  
   <string name="gesture_title">手势</string>  
   <string name="direct_control_title">体感</string>
   <string name="direct_call_for_dialer_title">拨号界面体感拨号</string>

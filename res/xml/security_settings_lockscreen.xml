@@ -47,6 +47,26 @@
             android:title="@string/lockscreen_targets_message"
             settings:advanced="true"/>
 
+		<PreferenceScreen
+		        android:key="lock_screen_weather_settings"
+		        android:title="@string/lock_screen_weather_settings_title"
+		        android:summary="@string/lock_screen_weather_settings_summary"
+		        android:fragment="com.android.settings.bliss.LockScreenWeatherSettings" />
+		
+		    <PreferenceScreen
+		        android:key="lock_clock"
+		        android:title="@string/lock_clock_title"
+		        android:summary="@string/lock_clock_summary">
+		        <intent android:action="android.intent.action.MAIN"
+		                android:targetPackage="com.cyanogenmod.lockclock"
+		                android:targetClass="com.cyanogenmod.lockclock.preference.Preferences" />
+		    </PreferenceScreen>
+
+             <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="chinese_date_view"
+            android:title="@string/show_chinese_date"
+            android:defaultValue="true" />
+
         <com.android.settings.cyanogenmod.SecureSettingSwitchPreference
             android:key="lockscreen_visualizer"
             android:title="@string/lockscreen_visualizer_title"
